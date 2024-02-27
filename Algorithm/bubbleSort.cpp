@@ -9,24 +9,28 @@ void print(int a[],int n){
     }
 }
 
+void Swap(int& a,int& b){
+
+    //Pass By reference
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+
+}
+
 void bubble(int a[],int n){
 
     int temp;
     for(int i=1;i<n;i++){
         for(int j=0;j<n-1;j++){
             if(a[i]<a[j]){
-                //swap(a[i],a[j])
-                temp=a[i];
-                a[i]=a[j];
-                a[j]=temp;
+                Swap(a[i],a[j]);
+                // temp=a[i];
+                // a[i]=a[j];
+                // a[j]=temp;
             }
         }
-        // if(a[i] < a[i-1]){
-        //     //swap(a[i],a[i-1])
-        //     temp=a[i];
-        //     a[i]=a[i-1];
-        //     a[i-1]=temp;
-        // }
     }
 }
 
